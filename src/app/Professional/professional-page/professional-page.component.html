@@ -1,1 +1,104 @@
-<p>professional-page works!</p>
+<section id="banner">
+  <h1>{{code}}</h1>
+</section>
+
+<section id="aboutMe">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="title">Who I am?</h2>
+          <p class="desc" [innerHTML]="desc"></p>
+          <div class="text-center">
+            <img class="coding-2" src=".././../../assets/images/coding2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2 class="title text-center">Techy!</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-6 col-sm-12 pad20">
+        <h3>Key Strengths</h3>
+        <ul>
+          <li *ngFor="let sum of summary">
+            <p class="card-text">
+              {{sum}}
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <h5 class="card-title marginTop16px purple">Skills</h5>
+        <div *ngFor="let skill of skillProgressBar">
+          <p class="card-text" style="margin-top: 8px">{{skill.skill}}</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="background-color: #673ab7"
+              [style.width]="skill.progress">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <h2 class="title text-center">Experience!</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-6 col-sm-12 pad20">
+        <h3>Tata Consultancy Services (2019-2020)</h3>
+        <h4>(Systems Engineer)</h4>
+        <ul>
+          <li *ngFor="let task of systemEngineer">
+            <p class="card-text">
+              {{task}}
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 pad20">
+        <h3>Tata Consultancy Services (2017-2019)</h3>
+        <h4>(Assistant Systems Engineer)</h4>
+        <ul>
+          <li *ngFor="let task of assistantSystemEngineer">
+            <p class="card-text">
+              {{task}}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="container">
+    <h2 class="title text-center">Achievements!</h2>
+    <div class="row justify-content-center ">
+      <div class="col-lg-6 col-md-6 col-sm-12  text-center pad20">
+        <img class="cover1" src="../../../assets/images/cover1.jpg" alt="">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 pad20 mt-20">
+        <ul>
+          <li *ngFor="let ach of achievements">
+            <p class="card-text">
+              {{ach}}
+            </p>
+          </li>
+        </ul>
+        <a class="main-btn" href="https://github.com/anandverma08">My GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="game">
+  <app-game></app-game>
+</section>
+

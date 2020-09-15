@@ -1,14 +1,30 @@
+nav{
+  background: #644990;
+  height: 80px;
+}
+
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 5%;
+}
+
+a.active,a:hover{
+  text-decoration: none;
+}
+
 #bgCover {
   background-color: #ece6e6;
   padding: 60px 0;
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 #aboutMe, #myPoems, #myVideos {
   padding: 60px 10px;
   height: 100vh;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 #myPoems {
@@ -23,6 +39,11 @@
   position: relative;
 }
 
+.header-image img {
+  position: relative;
+  z-index: 5;
+}
+
 .header-content {
   position: relative;
 }
@@ -34,6 +55,22 @@ img {
   border: 20px solid #644990;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #283a80;
+  margin: 20px 0;
+}
+
+iframe {
+  width: 100%;
+}
+
 .poemsImg {
   border: 2px solid #644990;
   height: 350px;
@@ -43,11 +80,6 @@ img {
 .showOnSmall{
   display: none;
   margin: 0 auto;
-}
-
-.header-image img {
-  position: relative;
-  z-index: 5;
 }
 
 .sub-title {
@@ -101,66 +133,16 @@ img {
   margin-right: 20px;
 }
 
-.mt-10 {
-  margin-top: 10px;
-}
-
-p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  color: #8a8fa3;
-  margin: 20px 0;
-}
-
 .desc {
   font-size: 20px;
 }
 
-iframe {
-  width: 100%;
-}
+@media (max-width:768px) {
 
-ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  nav {
+    display: none;
   }
 
-
-.fa {
-  padding: 20px;
-  font-size: 24px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-.fa-youtube {
-  background: #bb0000;
-  color: white;
-}
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-@media (max-width:768px) {
   #bgCover {
     padding: 30px 0;
     height: 100%;
@@ -214,17 +196,9 @@ ul {
     margin-top: 20px;
   }
 
-  .fa {
-    padding: 20px;
-    font-size: 16px;
-
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-  }
 }
 
-@media (min-width:768px) and (max-width:996px){
+@media (min-width:768px) and (max-width:1023px){
   .main-btn:nth-child(1){
     margin-bottom: 20px;
   }
